@@ -19,10 +19,10 @@ TODO
 To publish the lambda layer publicly:
 
 ```
-docker build -t etl-budget-aws-lambda-layer .
+docker build -t wesa-aws-lambda-layer-python-pandas .
 export AWS_ACCESS_KEY_ID=abc
 export AWS_SECRET_ACCESS_KEY=abc
-docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY etl-budget-aws-lambda-layer
+docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY wesa-aws-lambda-layer-python-pandas
 ```
 
 This will output something along

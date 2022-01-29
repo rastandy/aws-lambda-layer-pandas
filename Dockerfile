@@ -3,7 +3,7 @@ FROM lambci/lambda:build-python3.7
 
 ENV AWS_DEFAULT_REGION eu-central-1
 ENV region eu-central-1
-ENV bucket_name etl-budget-aws-lambda-layer
+ENV bucket_name wesa-aws-lambda-layer-python-pandas
 
 # https://github.com/clerk67/numpy-layer/blob/master/Dockerfile
 #
