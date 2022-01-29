@@ -1,9 +1,9 @@
 # https://github.com/lambci/docker-lambda
 FROM lambci/lambda:build-python3.7
 
-ENV AWS_DEFAULT_REGION us-east-1
-ENV region us-east-1
-ENV bucket_name aws-lambda-layer-pandas
+ENV AWS_DEFAULT_REGION eu-central-1
+ENV region eu-central-1
+ENV bucket_name etl-budget-aws-lambda-layer
 
 # https://github.com/clerk67/numpy-layer/blob/master/Dockerfile
 #
@@ -19,7 +19,7 @@ RUN zip -ry9 layer.zip layer
 # RUN aws lambda publish-layer-version --layer-name ${LAYER_NAME} --zip-file fileb://layer.zip --compatible-runtimes $COMPATIBLE_RUNTIMES
 
 # https://github.com/iopipe/iopipe-python/blob/master/publish-layers.sh
-CMD export region=us-east-1 \
+CMD export region=${region} \
     && \
     export PY3X_DIST=layer.zip \
     && \
