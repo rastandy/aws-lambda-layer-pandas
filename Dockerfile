@@ -41,14 +41,14 @@ CMD export region=${region} \
     && \
     echo "published python3.x layer version ${py3x_version} to ${region}" \
     && \
-    echo "Setting public permissions for python3.x layer version ${py3x_version} in ${region}" \
+    echo "Setting permissions for python3.x layer version ${py3x_version} in ${region}" \
     && \
     aws lambda add-layer-version-permission \
       --layer-name Pandas \
       --version-number $py3x_version \
       --statement-id public \
       --action lambda:GetLayerVersion \
-      --principal "*" \
+      --principal "719747043315" \
       --region $region \
     && \
-    echo "Public permissions set for python3.x Layer version ${py3x_version} in region ${region}"
+    echo "Permissions set for python3.x Layer version ${py3x_version} in region ${region}"
