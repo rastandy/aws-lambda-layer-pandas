@@ -11,7 +11,7 @@ ENV bucket_name wesa-aws-lambda-layer-python-pandas
 # https://github.com/iopipe/iopipe-python/blob/master/publish-layers.sh
 # Removed matplotlib because otherwise the lambda layer will exceed the max of around 260MB
 RUN pip install --upgrade pip && \
-    pip install -t python/lib/python3.7/site-packages/ pandas numpy PyYAML Xlrd openpyxl && \
+    pip install -t python/lib/python3.7/site-packages/ google-api-python-client google-auth pandas numpy PyYAML Xlrd openpyxl && \
     find python -name '__pycache__' -exec rm -fr {} +
 RUN zip -ry9 layer.zip python
 
